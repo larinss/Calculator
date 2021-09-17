@@ -27,28 +27,28 @@
         android:layout_marginEnd="10dp">
 
         <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/btn_clean"
+            android:id="@+id/clean_button"
             android:layout_marginStart="5dp"
             android:background="@drawable/orange"
             android:gravity="center"
-            android:text="@string/text_btn_c"
+            android:text="@string/c_button_title"
             android:textSize="25sp" />
 
         <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/btn_del"
+            android:id="@+id/delete_button"
             android:layout_marginStart="10dp"
             android:layout_span="2"
             android:background="@drawable/white"
             android:gravity="center"
-            android:text="@string/text_btn_del"
+            android:text="@string/delete_button_title"
             android:textSize="25sp" />
 
         <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/btn_divide"
+            android:id="@+id/divide_button"
             android:layout_marginStart="10dp"
             android:background="@drawable/white"
             android:gravity="center"
-            android:text="@string/text_btn_divide"
+            android:text="@string/divide_button_title"
             android:textSize="25sp" />
 
     </TableRow>
@@ -59,35 +59,35 @@
         android:layout_marginEnd="10dp">
 
         <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/btn_7"
+            android:id="@+id/digit_seven_button"
             android:layout_marginStart="5dp"
             android:background="@drawable/white"
             android:gravity="center"
-            android:text="@string/text_btn_7"
+            android:text="@string/digit_seven_button_title"
             android:textSize="25sp" />
 
         <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/btn_8"
+            android:id="@+id/digit_eight_button"
             android:layout_marginStart="10dp"
             android:background="@drawable/white"
             android:gravity="center"
-            android:text="@string/text_btn_8"
+            android:text="@string/digit_eight_button_title"
             android:textSize="25sp" />
 
         <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/btn_9"
+            android:id="@+id/digit_nine_button"
             android:layout_marginStart="10dp"
             android:background="@drawable/white"
             android:gravity="center"
-            android:text="@string/text_btn_9"
+            android:text="@string/digit_nine_button_title"
             android:textSize="25sp" />
 
         <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/btn_multiply"
+            android:id="@+id/multiply_button"
             android:layout_marginStart="10dp"
             android:background="@drawable/white"
             android:gravity="center"
-            android:text="@string/text_btn_star"
+            android:text="@string/multiply_button_title"
             android:textSize="25sp" />
     </TableRow>
 
@@ -97,35 +97,35 @@
         android:layout_marginEnd="10dp">
 
         <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/btn_4"
+            android:id="@+id/digit_four_button"
             android:layout_marginStart="5dp"
             android:background="@drawable/white"
             android:gravity="center"
-            android:text="@string/text_btn_4"
+            android:text="@string/digit_four_button_title"
             android:textSize="25sp" />
 
         <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/btn_5"
+            android:id="@+id/digit_five_button"
             android:layout_marginStart="10dp"
             android:background="@drawable/white"
             android:gravity="center"
-            android:text="@string/text_btn_5"
+            android:text="@string/digit_five_button_title"
             android:textSize="25sp" />
 
         <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/btn_6"
+            android:id="@+id/digit_six_button"
             android:layout_marginStart="10dp"
             android:background="@drawable/white"
             android:gravity="center"
-            android:text="@string/text_btn_6"
+            android:text="@string/digit_six_button_title"
             android:textSize="25sp" />
 
         <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/btn_add"
+            android:id="@+id/add_button"
             android:layout_marginStart="10dp"
             android:background="@drawable/white"
             android:gravity="center"
-            android:text="@string/text_btn_add"
+            android:text="@string/add_button_title"
             android:textSize="25sp" />
     </TableRow>
 
@@ -135,35 +135,35 @@
         android:layout_marginEnd="10dp">
 
         <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/btn_1"
+            android:id="@+id/digit_one_button"
             android:layout_marginStart="5dp"
             android:background="@drawable/white"
             android:gravity="center"
-            android:text="@string/text_btn_1"
+            android:text="@string/digit_one_button_title"
             android:textSize="25sp" />
 
         <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/btn_2"
+            android:id="@+id/digit_two_button"
             android:layout_marginStart="10dp"
             android:background="@drawable/white"
             android:gravity="center"
-            android:text="@string/text_btn_2"
+            android:text="@string/digit_two_button_title"
             android:textSize="25sp" />
 
         <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/btn_3"
+            android:id="@+id/digit_three_button"
             android:layout_marginStart="10dp"
             android:background="@drawable/white"
             android:gravity="center"
-            android:text="@string/text_btn_3"
+            android:text="@string/digit_three_button_title"
             android:textSize="25sp" />
 
         <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/btn_minus"
+            android:id="@+id/minus_button"
             android:layout_marginStart="10dp"
             android:background="@drawable/white"
             android:gravity="center"
-            android:text="@string/text_btn_minus"
+            android:text="@string/minus_button_title"
             android:textSize="25sp" />
 
     </TableRow>
@@ -175,28 +175,28 @@
         android:layout_marginEnd="10dp">
 
         <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/btn_0"
+            android:id="@+id/digit_zero_button"
             android:layout_marginStart="5dp"
             android:layout_span="2"
             android:background="@drawable/white"
             android:gravity="center"
-            android:text="@string/text_btn_0"
+            android:text="@string/digit_zero_button_title"
             android:textSize="25sp" />
 
         <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/btn_point"
+            android:id="@+id/point_button"
             android:layout_marginStart="10dp"
             android:background="@drawable/white"
             android:gravity="center"
-            android:text="@string/text_btn_point"
+            android:text="@string/point_button_title"
             android:textSize="25sp" />
 
         <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/btn_equal"
+            android:id="@+id/equal_button"
             android:layout_marginStart="10dp"
             android:background="@drawable/white"
             android:gravity="center"
-            android:text="@string/text_btn_equal"
+            android:text="@string/equal_button_title"
             android:textSize="25sp" />
 
 

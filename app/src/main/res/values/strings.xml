@@ -1,22 +1,21 @@
 <resources>
     <string name="app_name">Calculator</string>
-    <string name="text_btn_c">C</string>
-    <string name="text_btn_del">Del</string>
-    <string name="text_btn_slash">/</string>
-    <string name="text_btn_7">7</string>
-    <string name="text_btn_8">8</string>
-    <string name="text_btn_9">9</string>
-    <string name="text_btn_star">*</string>
-    <string name="text_btn_4">4</string>
-    <string name="text_btn_5">5</string>
-    <string name="text_btn_6">6</string>
-    <string name="text_btn_add">+</string>
-    <string name="text_btn_1">1</string>
-    <string name="text_btn_2">2</string>
-    <string name="text_btn_3">3</string>
-    <string name="text_btn_minus">-</string>
-    <string name="text_btn_0">0</string>
-    <string name="text_btn_point">.</string>
-    <string name="text_btn_equal">=</string>
-    <string name="text_btn_divide">/</string>
+    <string name="c_button_title">C</string>
+    <string name="delete_button_title">Del</string>
+    <string name="divide_button_title">/</string>
+    <string name="digit_seven_button_title">7</string>
+    <string name="digit_eight_button_title">8</string>
+    <string name="digit_nine_button_title">9</string>
+    <string name="multiply_button_title">*</string>
+    <string name="digit_four_button_title">4</string>
+    <string name="digit_five_button_title">5</string>
+    <string name="digit_six_button_title">6</string>
+    <string name="add_button_title">+</string>
+    <string name="digit_one_button_title">1</string>
+    <string name="digit_two_button_title">2</string>
+    <string name="digit_three_button_title">3</string>
+    <string name="minus_button_title">-</string>
+    <string name="digit_zero_button_title">0</string>
+    <string name="point_button_title">.</string>
+    <string name="equal_button_title">=</string>
 </resources>

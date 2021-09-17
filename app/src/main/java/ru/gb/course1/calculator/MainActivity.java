@@ -12,8 +12,8 @@ public class MainActivity extends AppCompatActivity {
 
     TextView calculatorScreenTextView;
 
-    Button btnClean, btnDel, btnDivide, btnZero, btnOne, btnTwo, btnThree, btnFour, btnFive, btnSix, btnSeven, btnEight, btnNine,
-            btnMultiply, btnAdd, btnMinus, btnPoint, btnEqual;
+    Button cleanButton, deleteButton, divideButton, digitZeroButton, digitOneButton, digitTwoButton, digitThreeButton, digitFourButton, digitFiveButton, digitSixButton, digitSevenButton, digitEightButton, digitNineButton,
+            multiplyButton, addButton, minusButton, pointButton, equalButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,61 +22,61 @@ public class MainActivity extends AppCompatActivity {
 
         calculatorScreenTextView = findViewById(R.id.calculator_screen_text_view);
 
-        btnZero = findViewById(R.id.btn_0);
-        btnOne = findViewById(R.id.btn_1);
-        btnTwo = findViewById(R.id.btn_2);
-        btnThree = findViewById(R.id.btn_3);
-        btnFour = findViewById(R.id.btn_4);
-        btnFive = findViewById(R.id.btn_5);
-        btnSix = findViewById(R.id.btn_6);
-        btnSeven = findViewById(R.id.btn_7);
-        btnEight = findViewById(R.id.btn_8);
-        btnNine = findViewById(R.id.btn_9);
-        btnMultiply = findViewById(R.id.btn_multiply);
-        btnDivide = findViewById(R.id.btn_divide);
-        btnAdd = findViewById(R.id.btn_add);
-        btnMinus = findViewById(R.id.btn_minus);
-        btnPoint = findViewById(R.id.btn_point);
-        btnDel = findViewById(R.id.btn_del);
-        btnEqual = findViewById(R.id.btn_equal);
-        btnClean = findViewById(R.id.btn_clean);
+        digitZeroButton = findViewById(R.id.digit_zero_button);
+        digitOneButton = findViewById(R.id.digit_one_button);
+        digitTwoButton = findViewById(R.id.digit_two_button);
+        digitThreeButton = findViewById(R.id.digit_three_button);
+        digitFourButton = findViewById(R.id.digit_four_button);
+        digitFiveButton = findViewById(R.id.digit_five_button);
+        digitSixButton = findViewById(R.id.digit_six_button);
+        digitSevenButton = findViewById(R.id.digit_seven_button);
+        digitEightButton = findViewById(R.id.digit_eight_button);
+        digitNineButton = findViewById(R.id.digit_nine_button);
+        multiplyButton = findViewById(R.id.multiply_button);
+        divideButton = findViewById(R.id.divide_button);
+        addButton = findViewById(R.id.add_button);
+        minusButton = findViewById(R.id.minus_button);
+        pointButton = findViewById(R.id.point_button);
+        deleteButton = findViewById(R.id.delete_button);
+        equalButton = findViewById(R.id.equal_button);
+        cleanButton = findViewById(R.id.clean_button);
 
 
-        btnZero.setOnClickListener(view -> {
+        digitZeroButton.setOnClickListener(view -> {
         });
-        btnOne.setOnClickListener(view -> {
+        digitOneButton.setOnClickListener(view -> {
         });
-        btnTwo.setOnClickListener(view -> {
+        digitTwoButton.setOnClickListener(view -> {
         });
-        btnThree.setOnClickListener(view -> {
+        digitThreeButton.setOnClickListener(view -> {
         });
-        btnFour.setOnClickListener(view -> {
+        digitFourButton.setOnClickListener(view -> {
         });
-        btnFive.setOnClickListener(view -> {
+        digitFiveButton.setOnClickListener(view -> {
         });
-        btnSix.setOnClickListener(view -> {
+        digitSixButton.setOnClickListener(view -> {
         });
-        btnSeven.setOnClickListener(view -> {
+        digitSevenButton.setOnClickListener(view -> {
         });
-        btnEight.setOnClickListener(view -> {
+        digitEightButton.setOnClickListener(view -> {
         });
-        btnNine.setOnClickListener(view -> {
+        digitNineButton.setOnClickListener(view -> {
         });
-        btnMinus.setOnClickListener(view -> {
+        minusButton.setOnClickListener(view -> {
         });
-        btnMultiply.setOnClickListener(view -> {
+        multiplyButton.setOnClickListener(view -> {
         });
-        btnDel.setOnClickListener(view -> {
+        deleteButton.setOnClickListener(view -> {
         });
-        btnDivide.setOnClickListener(view -> {
+        divideButton.setOnClickListener(view -> {
         });
-        btnPoint.setOnClickListener(view -> {
+        pointButton.setOnClickListener(view -> {
         });
-        btnAdd.setOnClickListener(view -> {
+        addButton.setOnClickListener(view -> {
         });
-        btnEqual.setOnClickListener(view -> {
+        equalButton.setOnClickListener(view -> {
         });
-        btnClean.setOnClickListener(view -> {
+        cleanButton.setOnClickListener(view -> {
         });
     }
 }
