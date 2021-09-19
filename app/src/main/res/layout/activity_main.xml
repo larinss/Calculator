@@ -4,31 +4,29 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/metal_texture"
+    android:stretchColumns="0,1,2,3"
     tools:context=".MainActivity">
 
     <TableRow
-        android:layout_marginStart="10dp"
         android:layout_marginTop="32dp"
-        android:layout_marginEnd="10dp">
+        android:layout_weight="1">
 
         <TextView
             android:id="@+id/calculator_screen_text_view"
-            android:layout_marginStart="5dp"
             android:layout_span="4"
             android:background="@drawable/white"
             android:gravity="bottom|end"
             android:singleLine="true"
             android:textSize="70sp" />
+
     </TableRow>
 
     <TableRow
-        android:layout_marginStart="10dp"
         android:layout_marginTop="60dp"
-        android:layout_marginEnd="10dp">
+        android:layout_weight="1">
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/clean_button"
-            android:layout_marginStart="5dp"
             android:background="@drawable/orange"
             android:gravity="center"
             android:text="@string/c_button_title"
@@ -54,13 +52,11 @@
     </TableRow>
 
     <TableRow
-        android:layout_marginStart="10dp"
         android:layout_marginTop="10dp"
-        android:layout_marginEnd="10dp">
+        android:layout_weight="1">
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/digit_seven_button"
-            android:layout_marginStart="5dp"
             android:background="@drawable/white"
             android:gravity="center"
             android:text="@string/digit_seven_button_title"
@@ -89,16 +85,15 @@
             android:gravity="center"
             android:text="@string/multiply_button_title"
             android:textSize="25sp" />
+
     </TableRow>
 
     <TableRow
-        android:layout_marginStart="10dp"
         android:layout_marginTop="10dp"
-        android:layout_marginEnd="10dp">
+        android:layout_weight="1">
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/digit_four_button"
-            android:layout_marginStart="5dp"
             android:background="@drawable/white"
             android:gravity="center"
             android:text="@string/digit_four_button_title"
@@ -127,16 +122,15 @@
             android:gravity="center"
             android:text="@string/add_button_title"
             android:textSize="25sp" />
+
     </TableRow>
 
     <TableRow
-        android:layout_marginStart="10dp"
         android:layout_marginTop="10dp"
-        android:layout_marginEnd="10dp">
+        android:layout_weight="1">
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/digit_one_button"
-            android:layout_marginStart="5dp"
             android:background="@drawable/white"
             android:gravity="center"
             android:text="@string/digit_one_button_title"
@@ -170,13 +164,11 @@
 
 
     <TableRow
-        android:layout_marginStart="10dp"
         android:layout_marginTop="10dp"
-        android:layout_marginEnd="10dp">
+        android:layout_weight="1">
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/digit_zero_button"
-            android:layout_marginStart="5dp"
             android:layout_span="2"
             android:background="@drawable/white"
             android:gravity="center"
@@ -198,7 +190,6 @@
             android:gravity="center"
             android:text="@string/equal_button_title"
             android:textSize="25sp" />
-
 
     </TableRow>
 

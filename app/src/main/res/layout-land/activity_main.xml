@@ -16,7 +16,7 @@
             android:background="@drawable/white"
             android:gravity="bottom|end"
             android:singleLine="true"
-            android:textSize="50dp" />
+            android:textSize="50sp" />
     </TableRow>
 
 
