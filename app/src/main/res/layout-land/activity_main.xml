@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/metal_texture"
+    android:stretchColumns="0,1,2,3,4"
+    tools:context=".MainActivity">
+
+    <TableRow android:layout_marginTop="16dp">
+
+        <TextView
+            android:id="@+id/calculator_screen_text_view"
+            android:layout_width="match_parent"
+            android:layout_span="5"
+            android:background="@drawable/white"
+            android:gravity="bottom|end"
+            android:singleLine="true"
+            android:textSize="50dp" />
+    </TableRow>
+
+
+    <TableRow android:layout_marginTop="32dp">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/digit_seven_button"
+            android:background="@drawable/white"
+            android:gravity="center"
+            android:text="@string/digit_seven_button_title"
+            android:textSize="25sp" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/digit_eight_button"
+            android:layout_marginStart="5dp"
+            android:background="@drawable/white"
+            android:gravity="center"
+            android:text="@string/digit_eight_button_title"
+            android:textSize="25sp" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/digit_nine_button"
+            android:layout_marginStart="5dp"
+            android:background="@drawable/white"
+            android:gravity="center"
+            android:text="@string/digit_nine_button_title"
+            android:textSize="25sp" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/multiply_button"
+            android:layout_marginStart="5dp"
+            android:background="@drawable/white"
+            android:gravity="center"
+            android:text="@string/multiply_button_title"
+            android:textSize="25sp" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/clean_button"
+            android:layout_marginStart="5dp"
+            android:background="@drawable/orange"
+            android:gravity="center"
+            android:text="@string/c_button_title"
+            android:textSize="25sp" />
+    </TableRow>
+
+    <TableRow android:layout_marginTop="5dp">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/digit_four_button"
+            android:background="@drawable/white"
+            android:gravity="center"
+            android:text="@string/digit_four_button_title"
+            android:textSize="25sp" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/digit_five_button"
+            android:layout_marginStart="5dp"
+            android:background="@drawable/white"
+            android:gravity="center"
+            android:text="@string/digit_five_button_title"
+            android:textSize="25sp" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/digit_six_button"
+            android:layout_marginStart="5dp"
+            android:background="@drawable/white"
+            android:gravity="center"
+            android:text="@string/digit_six_button_title"
+            android:textSize="25sp" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/add_button"
+            android:layout_marginStart="5dp"
+            android:background="@drawable/white"
+            android:gravity="center"
+            android:text="@string/add_button_title"
+            android:textSize="25sp" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/delete_button"
+            android:layout_marginStart="5dp"
+            android:layout_span="2"
+            android:background="@drawable/white"
+            android:gravity="center"
+            android:text="@string/delete_button_title"
+            android:textSize="25sp" />
+
+    </TableRow>
+
+    <TableRow android:layout_marginTop="5dp">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/digit_one_button"
+            android:background="@drawable/white"
+            android:gravity="center"
+            android:text="@string/digit_one_button_title"
+            android:textSize="25sp" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/digit_two_button"
+            android:layout_marginStart="5dp"
+            android:background="@drawable/white"
+            android:gravity="center"
+            android:text="@string/digit_two_button_title"
+            android:textSize="25sp" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/digit_three_button"
+            android:layout_marginStart="5dp"
+            android:background="@drawable/white"
+            android:gravity="center"
+            android:text="@string/digit_three_button_title"
+            android:textSize="25sp" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/minus_button"
+            android:layout_marginStart="5dp"
+            android:background="@drawable/white"
+            android:gravity="center"
+            android:text="@string/minus_button_title"
+            android:textSize="25sp" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/divide_button"
+            android:layout_marginStart="5dp"
+            android:background="@drawable/white"
+            android:gravity="center"
+            android:text="@string/divide_button_title"
+            android:textSize="25sp" />
+
+    </TableRow>
+
+
+    <TableRow android:layout_marginTop="5dp">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/digit_zero_button"
+            android:layout_span="2"
+            android:background="@drawable/white"
+            android:gravity="center"
+            android:text="@string/digit_zero_button_title"
+            android:textSize="25sp" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/point_button"
+            android:layout_marginStart="5dp"
+            android:background="@drawable/white"
+            android:gravity="center"
+            android:text="@string/point_button_title"
+            android:textSize="25sp" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/equal_button"
+            android:layout_marginStart="5dp"
+            android:layout_span="2"
+            android:background="@drawable/white"
+            android:gravity="center"
+            android:text="@string/equal_button_title"
+            android:textSize="25sp" />
+
+    </TableRow>
+
+
+</TableLayout>
