@@ -10,33 +10,35 @@ import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
-    private static final String VALUE_ONE_KEY = "";
-    private static final String VALUE_TWO_KEY = "";
-    private static final String RESULT_KEY = "";
-    private static final String INPUT_VALUE_OF_CALCULATOR_SCREEN_KEY = "";
-    private static final String SYMBOL_OPERATION_KEY = "";
+    AlgorithmOfCalculatorButtonsOperation buttonsOperation = new AlgorithmOfCalculatorButtonsOperation();
 
-    private double valueOne = 0;
-    private double valueTwo = 0;
-    private double result = 0;
-    private String symbolOperation = "";
-    private String inputValueOfCalculatorScreen = "";
+    private static final String VALUE_ONE_KEY = "valueOne";
+    private static final String VALUE_TWO_KEY = "valueTwo";
+    private static final String RESULT_KEY = "result";
+    private static final String INPUT_VALUE_OF_CALCULATOR_SCREEN_KEY = "inputValueOfCalculatorScreen";
+    private static final String SYMBOL_OPERATION_KEY = "symbolOperation";
 
     TextView calculatorScreenTextView;
-    Button cleanButton, deleteButton, divideButton, digitZeroButton, digitOneButton, digitTwoButton, digitThreeButton, digitFourButton, digitFiveButton, digitSixButton, digitSevenButton, digitEightButton, digitNineButton,
-            multiplyButton, addButton, minusButton, pointButton, equalButton;
+    Button cleanButton, deleteButton, divideButton, digitZeroButton, digitOneButton, digitTwoButton,
+            digitThreeButton, digitFourButton, digitFiveButton, digitSixButton, digitSevenButton,
+            digitEightButton, digitNineButton, multiplyButton, addButton, minusButton, pointButton, equalButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        if (savedInstanceState != null && savedInstanceState.containsKey(VALUE_ONE_KEY) && savedInstanceState.containsKey(VALUE_TWO_KEY) && savedInstanceState.containsKey(RESULT_KEY) && savedInstanceState.containsKey(INPUT_VALUE_OF_CALCULATOR_SCREEN_KEY) && savedInstanceState.containsKey(SYMBOL_OPERATION_KEY)) {
-            valueOne = savedInstanceState.getDouble(VALUE_ONE_KEY);
-            valueTwo = savedInstanceState.getDouble(VALUE_TWO_KEY);
-            result = savedInstanceState.getDouble(RESULT_KEY);
-            inputValueOfCalculatorScreen = savedInstanceState.getString(INPUT_VALUE_OF_CALCULATOR_SCREEN_KEY);
-            symbolOperation = savedInstanceState.getString(SYMBOL_OPERATION_KEY);
+        if (savedInstanceState != null && savedInstanceState.containsKey(VALUE_ONE_KEY)
+                && savedInstanceState.containsKey(VALUE_TWO_KEY)
+                && savedInstanceState.containsKey(RESULT_KEY)
+                && savedInstanceState.containsKey(INPUT_VALUE_OF_CALCULATOR_SCREEN_KEY)
+                && savedInstanceState.containsKey(SYMBOL_OPERATION_KEY)) {
+            buttonsOperation.valueOne = savedInstanceState.getDouble(VALUE_ONE_KEY);
+            buttonsOperation.valueTwo = savedInstanceState.getDouble(VALUE_TWO_KEY);
+            buttonsOperation.result = savedInstanceState.getDouble(RESULT_KEY);
+            buttonsOperation.inputValueOfCalculatorScreen = savedInstanceState.getString(INPUT_VALUE_OF_CALCULATOR_SCREEN_KEY);
+            buttonsOperation.symbolOperation = savedInstanceState.getString(SYMBOL_OPERATION_KEY);
+
         }
 
         calculatorScreenTextView = findViewById(R.id.calculator_screen_text_view);
@@ -62,130 +64,88 @@ public class MainActivity extends AppCompatActivity {
 
 
         digitZeroButton.setOnClickListener(view -> {
-            inputValueOfCalculatorScreen += 0;
-            calculatorScreenTextView.setText(inputValueOfCalculatorScreen);
+            if (buttonsOperation.digitZeroButton())
+                calculatorScreenTextView.setText(buttonsOperation.inputValueOfCalculatorScreen);
         });
         digitOneButton.setOnClickListener(view -> {
-            inputValueOfCalculatorScreen += 1;
-            calculatorScreenTextView.setText(inputValueOfCalculatorScreen);
+            if (buttonsOperation.digitOneButton())
+                calculatorScreenTextView.setText(buttonsOperation.inputValueOfCalculatorScreen);
         });
         digitTwoButton.setOnClickListener(view -> {
-            inputValueOfCalculatorScreen += 2;
-            calculatorScreenTextView.setText(inputValueOfCalculatorScreen);
+            if (buttonsOperation.digitTwoButton())
+                calculatorScreenTextView.setText(buttonsOperation.inputValueOfCalculatorScreen);
         });
         digitThreeButton.setOnClickListener(view -> {
-            inputValueOfCalculatorScreen += 3;
-            calculatorScreenTextView.setText(inputValueOfCalculatorScreen);
+            if (buttonsOperation.digitThreeButton())
+                calculatorScreenTextView.setText(buttonsOperation.inputValueOfCalculatorScreen);
         });
         digitFourButton.setOnClickListener(view -> {
-            inputValueOfCalculatorScreen += 4;
-            calculatorScreenTextView.setText(inputValueOfCalculatorScreen);
+            if (buttonsOperation.digitFourButton())
+                calculatorScreenTextView.setText(buttonsOperation.inputValueOfCalculatorScreen);
         });
         digitFiveButton.setOnClickListener(view -> {
-            inputValueOfCalculatorScreen += 5;
-            calculatorScreenTextView.setText(inputValueOfCalculatorScreen);
+            if (buttonsOperation.digitFiveButton())
+                calculatorScreenTextView.setText(buttonsOperation.inputValueOfCalculatorScreen);
         });
         digitSixButton.setOnClickListener(view -> {
-            inputValueOfCalculatorScreen += 6;
-            calculatorScreenTextView.setText(inputValueOfCalculatorScreen);
+            if (buttonsOperation.digitSixButton())
+                calculatorScreenTextView.setText(buttonsOperation.inputValueOfCalculatorScreen);
         });
         digitSevenButton.setOnClickListener(view -> {
-            inputValueOfCalculatorScreen += 7;
-            calculatorScreenTextView.setText(inputValueOfCalculatorScreen);
+            if (buttonsOperation.digitSevenButton())
+                calculatorScreenTextView.setText(buttonsOperation.inputValueOfCalculatorScreen);
         });
         digitEightButton.setOnClickListener(view -> {
-            inputValueOfCalculatorScreen += 8;
-            calculatorScreenTextView.setText(inputValueOfCalculatorScreen);
+            if (buttonsOperation.digitEightButton())
+                calculatorScreenTextView.setText(buttonsOperation.inputValueOfCalculatorScreen);
         });
         digitNineButton.setOnClickListener(view -> {
-            inputValueOfCalculatorScreen += 9;
-            calculatorScreenTextView.setText(inputValueOfCalculatorScreen);
+            if (buttonsOperation.digitNineButton())
+                calculatorScreenTextView.setText(buttonsOperation.inputValueOfCalculatorScreen);
         });
         minusButton.setOnClickListener(view -> {
-            if (symbolOperation.isEmpty() && !inputValueOfCalculatorScreen.isEmpty()) {
-                calculatorScreenTextView.setText("-");
-                symbolOperation = "-";
-                valueOne = Double.parseDouble(inputValueOfCalculatorScreen);
-                inputValueOfCalculatorScreen = "";
-            }
+            if (buttonsOperation.minusButton())
+                calculatorScreenTextView.setText(buttonsOperation.symbolOperation);
         });
         multiplyButton.setOnClickListener(view -> {
-            if (symbolOperation.isEmpty() && !inputValueOfCalculatorScreen.isEmpty()) {
-                calculatorScreenTextView.setText("*");
-                symbolOperation = "*";
-                valueOne = Double.parseDouble(inputValueOfCalculatorScreen);
-                inputValueOfCalculatorScreen = "";
-            }
+            if (buttonsOperation.multiplyButton())
+                calculatorScreenTextView.setText(buttonsOperation.symbolOperation);
         });
         deleteButton.setOnClickListener(view -> {
-            if (inputValueOfCalculatorScreen != null && inputValueOfCalculatorScreen.length() > 0) {
-                inputValueOfCalculatorScreen = inputValueOfCalculatorScreen.substring(0, inputValueOfCalculatorScreen.length() - 1);
-                calculatorScreenTextView.setText(inputValueOfCalculatorScreen);
-            }
+            buttonsOperation.deleteButton();
+            calculatorScreenTextView.setText(buttonsOperation.inputValueOfCalculatorScreen);
 
         });
         divideButton.setOnClickListener(view -> {
-            if (symbolOperation.isEmpty() && !inputValueOfCalculatorScreen.isEmpty()) {
-                calculatorScreenTextView.setText("/");
-                symbolOperation = "/";
-                valueOne = Double.parseDouble(inputValueOfCalculatorScreen);
-                inputValueOfCalculatorScreen = "";
-            }
+            if (buttonsOperation.divideButton())
+                calculatorScreenTextView.setText(buttonsOperation.symbolOperation);
         });
         pointButton.setOnClickListener(view -> {
-            if (!inputValueOfCalculatorScreen.isEmpty() && !inputValueOfCalculatorScreen.contains(".")) {
-                inputValueOfCalculatorScreen += ".";
-                calculatorScreenTextView.setText(inputValueOfCalculatorScreen);
-            }
+            if (buttonsOperation.pointButton())
+                calculatorScreenTextView.setText(buttonsOperation.inputValueOfCalculatorScreen);
         });
         addButton.setOnClickListener(view -> {
-            if (symbolOperation.isEmpty() && !inputValueOfCalculatorScreen.isEmpty()) {
-                calculatorScreenTextView.setText("+");
-                symbolOperation = "+";
-                valueOne = Double.parseDouble(inputValueOfCalculatorScreen);
-                inputValueOfCalculatorScreen = "";
-            }
+            if (buttonsOperation.addButton())
+                calculatorScreenTextView.setText(buttonsOperation.symbolOperation);
         });
         equalButton.setOnClickListener(view -> {
-            if (valueOne != 0 && !symbolOperation.isEmpty()) {
-                valueTwo = Double.parseDouble(inputValueOfCalculatorScreen);
-                inputValueOfCalculatorScreen = "";
-                if (valueTwo != 0 && symbolOperation.equals("+"))
-                    result = valueOne + valueTwo;
-                if (symbolOperation.equals("-"))
-                    result = valueOne - valueTwo;
-                if (symbolOperation.equals("*"))
-                    result = valueOne * valueTwo;
-                if (symbolOperation.equals("/"))
-                    if (valueTwo == 0) {
-                        Toast.makeText(this, "На ноль делить нельзя!", Toast.LENGTH_LONG).show();
-                        return;
-                    } else result = valueOne / valueTwo;
+            buttonsOperation.equalButton();
+            calculatorScreenTextView.setText(String.valueOf(buttonsOperation.result));
 
-                calculatorScreenTextView.setText(String.valueOf(result));
-                inputValueOfCalculatorScreen = "";
-                symbolOperation = "";
-                valueOne = 0;
-                valueTwo = 0;
-
-            }
         });
         cleanButton.setOnClickListener(view -> {
-            inputValueOfCalculatorScreen = "";
+            buttonsOperation.cleanButton();
             calculatorScreenTextView.setText("");
-            symbolOperation = "";
-            valueOne = 0;
-            valueTwo = 0;
         });
     }
 
     @Override
     protected void onSaveInstanceState(@NonNull Bundle outState) {
-        outState.putDouble(VALUE_ONE_KEY, valueOne);
-        outState.putDouble(VALUE_TWO_KEY, valueTwo);
-        outState.putDouble(RESULT_KEY, result);
-        outState.putString(INPUT_VALUE_OF_CALCULATOR_SCREEN_KEY, inputValueOfCalculatorScreen);
-        outState.putString(SYMBOL_OPERATION_KEY, symbolOperation);
+        outState.putDouble(VALUE_ONE_KEY, buttonsOperation.valueOne);
+        outState.putDouble(VALUE_TWO_KEY, buttonsOperation.valueTwo);
+        outState.putDouble(RESULT_KEY, buttonsOperation.result);
+        outState.putString(INPUT_VALUE_OF_CALCULATOR_SCREEN_KEY, buttonsOperation.inputValueOfCalculatorScreen);
+        outState.putString(SYMBOL_OPERATION_KEY, buttonsOperation.symbolOperation);
         super.onSaveInstanceState(outState);
 
     }
