@@ -42,8 +42,9 @@ public class MainActivity extends AppCompatActivity {
         }
 
         calculatorScreenTextView = findViewById(R.id.calculator_screen_text_view);
-
-        calculatorScreenTextView.setText(buttonsOperation.inputValueOfCalculatorScreen);
+        if (buttonsOperation.symbolOperation.isEmpty())
+            calculatorScreenTextView.setText(buttonsOperation.inputValueOfCalculatorScreen);
+        else calculatorScreenTextView.setText(buttonsOperation.symbolOperation);
 
         digitZeroButton = findViewById(R.id.digit_zero_button);
         digitOneButton = findViewById(R.id.digit_one_button);
