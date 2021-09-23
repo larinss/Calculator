@@ -94,7 +94,7 @@ public class AlgorithmOfCalculatorButtonsOperation {
         if (symbolOperation.isEmpty() && !inputValueOfCalculatorScreen.isEmpty()) {
             symbolOperation = "/";
             valueOne = Double.parseDouble(inputValueOfCalculatorScreen);
-            inputValueOfCalculatorScreen = "";
+            inputValueOfCalculatorScreen = "/";
             return true;
         }
         return false;
@@ -104,7 +104,7 @@ public class AlgorithmOfCalculatorButtonsOperation {
         if (symbolOperation.isEmpty() && !inputValueOfCalculatorScreen.isEmpty()) {
             symbolOperation = "*";
             valueOne = Double.parseDouble(inputValueOfCalculatorScreen);
-            inputValueOfCalculatorScreen = "";
+            inputValueOfCalculatorScreen = "*";
             return true;
         }
         return false;
@@ -114,7 +114,7 @@ public class AlgorithmOfCalculatorButtonsOperation {
         if (symbolOperation.isEmpty() && !inputValueOfCalculatorScreen.isEmpty()) {
             symbolOperation = "-";
             valueOne = Double.parseDouble(inputValueOfCalculatorScreen);
-            inputValueOfCalculatorScreen = "";
+            inputValueOfCalculatorScreen = "-";
             return true;
         }
         return false;
@@ -124,7 +124,7 @@ public class AlgorithmOfCalculatorButtonsOperation {
         if (symbolOperation.isEmpty() && !inputValueOfCalculatorScreen.isEmpty()) {
             symbolOperation = "+";
             valueOne = Double.parseDouble(inputValueOfCalculatorScreen);
-            inputValueOfCalculatorScreen = "";
+            inputValueOfCalculatorScreen = "+";
             return true;
         }
         return false;
@@ -153,7 +153,6 @@ public class AlgorithmOfCalculatorButtonsOperation {
     public void equalButton() {
         if (valueOne != 0 && !symbolOperation.isEmpty()) {
             valueTwo = Double.parseDouble(inputValueOfCalculatorScreen);
-            inputValueOfCalculatorScreen = "";
             if (valueTwo != 0 && symbolOperation.equals("+"))
                 result = valueOne + valueTwo;
             if (symbolOperation.equals("-"))
@@ -163,7 +162,7 @@ public class AlgorithmOfCalculatorButtonsOperation {
             if (symbolOperation.equals("/"))
                 result = valueOne / valueTwo;
 
-            inputValueOfCalculatorScreen = "";
+            inputValueOfCalculatorScreen = String.valueOf(result);
             symbolOperation = "";
             valueOne = 0;
             valueTwo = 0;
