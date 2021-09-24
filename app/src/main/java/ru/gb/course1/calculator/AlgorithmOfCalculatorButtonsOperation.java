@@ -94,7 +94,7 @@ public class AlgorithmOfCalculatorButtonsOperation {
         if (symbolOperation.isEmpty() && !inputValueOfCalculatorScreen.isEmpty()) {
             symbolOperation = "/";
             valueOne = Double.parseDouble(inputValueOfCalculatorScreen);
-            inputValueOfCalculatorScreen = "/";
+            inputValueOfCalculatorScreen = "";
             return true;
         }
         return false;
@@ -104,7 +104,7 @@ public class AlgorithmOfCalculatorButtonsOperation {
         if (symbolOperation.isEmpty() && !inputValueOfCalculatorScreen.isEmpty()) {
             symbolOperation = "*";
             valueOne = Double.parseDouble(inputValueOfCalculatorScreen);
-            inputValueOfCalculatorScreen = "*";
+            inputValueOfCalculatorScreen = "";
             return true;
         }
         return false;
@@ -114,7 +114,7 @@ public class AlgorithmOfCalculatorButtonsOperation {
         if (symbolOperation.isEmpty() && !inputValueOfCalculatorScreen.isEmpty()) {
             symbolOperation = "-";
             valueOne = Double.parseDouble(inputValueOfCalculatorScreen);
-            inputValueOfCalculatorScreen = "-";
+            inputValueOfCalculatorScreen = "";
             return true;
         }
         return false;
@@ -124,7 +124,7 @@ public class AlgorithmOfCalculatorButtonsOperation {
         if (symbolOperation.isEmpty() && !inputValueOfCalculatorScreen.isEmpty()) {
             symbolOperation = "+";
             valueOne = Double.parseDouble(inputValueOfCalculatorScreen);
-            inputValueOfCalculatorScreen = "+";
+            inputValueOfCalculatorScreen = "";
             return true;
         }
         return false;
@@ -139,7 +139,8 @@ public class AlgorithmOfCalculatorButtonsOperation {
     }
 
     public void deleteButton() {
-        inputValueOfCalculatorScreen = inputValueOfCalculatorScreen.substring(0, inputValueOfCalculatorScreen.length() - 1);
+        if (!inputValueOfCalculatorScreen.isEmpty())
+            inputValueOfCalculatorScreen = inputValueOfCalculatorScreen.substring(0, inputValueOfCalculatorScreen.length() - 1);
     }
 
     public void cleanButton() {
@@ -151,9 +152,9 @@ public class AlgorithmOfCalculatorButtonsOperation {
     }
 
     public void equalButton() {
-        if (valueOne != 0 && !symbolOperation.isEmpty()) {
+        if (!symbolOperation.isEmpty()) {
             valueTwo = Double.parseDouble(inputValueOfCalculatorScreen);
-            if (valueTwo != 0 && symbolOperation.equals("+"))
+            if (symbolOperation.equals("+"))
                 result = valueOne + valueTwo;
             if (symbolOperation.equals("-"))
                 result = valueOne - valueTwo;
@@ -167,5 +168,6 @@ public class AlgorithmOfCalculatorButtonsOperation {
             valueOne = 0;
             valueTwo = 0;
         }
+
     }
 }
