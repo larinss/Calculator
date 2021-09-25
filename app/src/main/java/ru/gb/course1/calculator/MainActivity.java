@@ -2,11 +2,16 @@ package ru.gb.course1.calculator;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatDelegate;
+import androidx.appcompat.widget.SwitchCompat;
 
 import android.os.Bundle;
 import android.widget.Button;
+import android.widget.CompoundButton;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import com.google.android.material.switchmaterial.SwitchMaterial;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -19,12 +24,18 @@ public class MainActivity extends AppCompatActivity {
     private static final String SYMBOL_OPERATION_KEY = "symbolOperation";
 
     TextView calculatorScreenTextView;
+    SwitchMaterial switchThemeButton;
     Button cleanButton, deleteButton, divideButton, digitZeroButton, digitOneButton, digitTwoButton,
             digitThreeButton, digitFourButton, digitFiveButton, digitSixButton, digitSevenButton,
             digitEightButton, digitNineButton, multiplyButton, addButton, minusButton, pointButton, equalButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
+        if (AppCompatDelegate.getDefaultNightMode() == AppCompatDelegate.MODE_NIGHT_YES)
+            setTheme(R.style.Theme_CalculatorDark);
+        else setTheme(R.style.Theme_CalculatorLight);
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
@@ -64,6 +75,14 @@ public class MainActivity extends AppCompatActivity {
         deleteButton = findViewById(R.id.delete_button);
         equalButton = findViewById(R.id.equal_button);
         cleanButton = findViewById(R.id.clean_button);
+
+        switchThemeButton = findViewById(R.id.switch_theme_button);
+
+        switchThemeButton.setOnCheckedChangeListener((compoundButton, isChecked) -> {
+            if (isChecked) AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES);
+            else AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
+
+        });
 
 
         digitZeroButton.setOnClickListener(view -> {
