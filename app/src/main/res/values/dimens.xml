@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <dimen name="margin_top_main_activity_table_row1">60dp</dimen>
-    <dimen name="margin_top_main_activity_table_row2">80dp</dimen>
+    <dimen name="margin_top_main_activity_table_row2">60dp</dimen>
 
     <dimen name="margin_top_between_rows_of_buttons">10dp</dimen>
     <dimen name="margin_top_between_rows_of_buttons_land">5dp</dimen>

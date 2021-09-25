@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/metal_texture"
+    android:background="?attr/background_color_main"
     android:stretchColumns="0,1,2,3"
     tools:context=".MainActivity">
 
@@ -14,11 +14,18 @@
         <TextView
             android:id="@+id/calculator_screen_text_view"
             android:layout_span="4"
-            android:background="@drawable/white"
+            android:background="?attr/background_text_view"
             android:gravity="bottom|end"
             android:singleLine="true"
+            android:textColor="?attr/text_color_text_view"
             android:textSize="@dimen/calc_text_size_text_view" />
+    </TableRow>
 
+    <TableRow>
+
+        <com.google.android.material.switchmaterial.SwitchMaterial
+            android:id="@+id/switch_theme_button"
+            android:layout_column="3" />
     </TableRow>
 
     <TableRow
@@ -42,7 +49,6 @@
             style="@style/BlueButtons"
             android:layout_marginStart="@dimen/margin_start_button"
             android:text="@string/divide_button_title" />
-
     </TableRow>
 
     <TableRow
@@ -71,7 +77,6 @@
             style="@style/BlueButtons"
             android:layout_marginStart="@dimen/margin_start_button"
             android:text="@string/multiply_button_title" />
-
     </TableRow>
 
     <TableRow
@@ -100,7 +105,6 @@
             style="@style/BlueButtons"
             android:layout_marginStart="@dimen/margin_start_button"
             android:text="@string/add_button_title" />
-
     </TableRow>
 
     <TableRow
@@ -128,10 +132,7 @@
             android:id="@+id/minus_button"
             style="@style/BlueButtons"
             android:layout_marginStart="@dimen/margin_start_button"
-            android:text="@string/minus_button_title"
-
-            />
-
+            android:text="@string/minus_button_title" />
     </TableRow>
 
 
@@ -156,7 +157,6 @@
             style="@style/BlueButtons"
             android:layout_marginStart="@dimen/margin_start_button"
             android:text="@string/equal_button_title" />
-
     </TableRow>
 
 </TableLayout>

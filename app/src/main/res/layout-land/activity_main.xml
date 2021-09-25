@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/metal_texture"
+    android:background="?attr/background_color_main"
     android:stretchColumns="0,1,2,3,4"
     tools:context=".MainActivity">
 
@@ -13,12 +13,19 @@
             android:id="@+id/calculator_screen_text_view"
             android:layout_width="match_parent"
             android:layout_span="5"
-            android:background="@drawable/white"
+            android:background="?attr/background_text_view"
             android:gravity="bottom|end"
             android:singleLine="true"
+            android:textColor="?attr/text_color_text_view"
             android:textSize="@dimen/calc_text_size_text_view_land" />
     </TableRow>
 
+    <TableRow>
+
+        <com.google.android.material.switchmaterial.SwitchMaterial
+            android:id="@+id/switch_theme_button"
+            android:layout_column="4" />
+    </TableRow>
 
     <TableRow android:layout_marginTop="@dimen/margin_top_main_activity_table_row2_land">
 
@@ -83,7 +90,6 @@
             android:layout_marginStart="@dimen/margin_start_button_land"
             android:layout_span="2"
             android:text="@string/delete_button_title" />
-
     </TableRow>
 
     <TableRow android:layout_marginTop="@dimen/margin_top_between_rows_of_buttons_land">
@@ -116,7 +122,6 @@
             style="@style/BlueButtonsLand"
             android:layout_marginStart="@dimen/margin_start_button_land"
             android:text="@string/divide_button_title" />
-
     </TableRow>
 
 
@@ -140,7 +145,6 @@
             android:layout_marginStart="@dimen/margin_start_button_land"
             android:layout_span="2"
             android:text="@string/equal_button_title" />
-
     </TableRow>
 
 
